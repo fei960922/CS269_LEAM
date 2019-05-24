@@ -34,13 +34,13 @@ Device = 'cuda:1' if USE_CUDA else 'cpu'
 
 """process data input to bag-of-words representation"""
 def dataset(data_url, monitor=False): 
-    data_withorder = np.load(data_url + '.multi.npy')
+    data_withorder = np.load(data_url + '.multi.npy', allow_pickle=True)
     seq = [list(x) for x in data_withorder]
     if monitor:
         print('Converting data to sequence')
     
     try:
-        labels_with_names = np.load(data_url + '.labels.multi.npy')
+        labels_with_names = np.load(data_url + '.labels.multi.npy', allow_pickle=True)
         labels = labels_with_names[0]
         class_names = labels_with_names[1]
     except:
@@ -54,13 +54,13 @@ def dataset(data_url, monitor=False):
 def onehot(data, min_length):
     return np.bincount(data, minlength=min_length)
 def bow_dataset(data_url, vocab_size, additional_text=False, monitor=False):
-    data_withorder = np.load(data_url + '.multi.npy')
+    data_withorder = np.load(data_url + '.multi.npy', allow_pickle=True)
     if monitor:
         print('Converting data to BoW representation')
     data_multihot = np.array([onehot(doc.astype('int'), vocab_size) for doc in data_withorder])
     word_count = [np.sum(doc) for doc in data_multihot]
     try:
-        labels_with_names = np.load(data_url + '.labels.multi.npy')
+        labels_with_names = np.load(data_url + '.labels.multi.npy', allow_pickle=True)
         labels = labels_with_names[0]
         class_names = labels_with_names[1]
     except:

@@ -4,8 +4,9 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 import os
-from utils import *
-from trainer import *
+from src.model import *
+from src.utils import *
+from src.trainer import *
 
 def write(cache, name, max_len=80, imp=1.5e-2):
     f.write('<p style="background-color:green;">%s</p>'%name)

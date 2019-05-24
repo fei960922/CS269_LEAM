@@ -9,10 +9,10 @@ from copy import deepcopy
 
 from torch import nn, optim, tensor
 from torch.autograd import Variable
-from utils import *
-from model import *
+from src.utils import *
+from src.model import *
 
-USE_CUDA = torch.cuda.is_available()
+print(USE_CUDA = torch.cuda.is_available())
 
 if USE_CUDA:
     torch.cuda.set_device(0)

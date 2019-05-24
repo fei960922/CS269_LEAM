@@ -4,8 +4,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 import os
-from utils import *
-from trainer import *
+from src.utils import *
+from src.trainer import *
 
 USE_CUDA = torch.cuda.is_available()
 
