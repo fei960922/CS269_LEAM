@@ -1,0 +1,30 @@
+\begin{thebibliography}{1}
+
+\bibitem{bahuleyan2017variational}
+Hareesh Bahuleyan, Lili Mou, Olga Vechtomova, and Pascal Poupart.
+\newblock Variational attention for sequence-to-sequence models.
+\newblock {\em arXiv preprint arXiv:1712.08207}, 2017.
+
+\bibitem{deng2018latent}
+Yuntian Deng, Yoon Kim, Justin Chiu, Demi Guo, and Alexander Rush.
+\newblock Latent alignment and variational attention.
+\newblock In {\em Advances in Neural Information Processing Systems}, pages
+  9712--9724, 2018.
+
+\bibitem{jiao2019probabilistic}
+Yue Jiao, Jonathon Hare, and Adam Prügel-Bennett.
+\newblock Probabilistic semantic embedding, 2019.
+
+\bibitem{wang2018joint}
+Guoyin Wang, Chunyuan Li, Wenlin Wang, Yizhe Zhang, Dinghan Shen, Xinyuan
+  Zhang, Ricardo Henao, and Lawrence Carin.
+\newblock Joint embedding of words and labels for text classification.
+\newblock {\em arXiv preprint arXiv:1805.04174}, 2018.
+
+\bibitem{you2018attentionxml}
+Ronghui You, Suyang Dai, Zihan Zhang, Hiroshi Mamitsuka, and Shanfeng Zhu.
+\newblock Attentionxml: Extreme multi-label text classification with
+  multi-label attention based recurrent neural networks.
+\newblock {\em arXiv preprint arXiv:1811.01727}, 2018.
+
+\end{thebibliography}

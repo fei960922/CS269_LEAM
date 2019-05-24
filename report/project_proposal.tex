@@ -1,0 +1,180 @@
+\documentclass{article}
+
+% if you need to pass options to natbib, use, e.g.:
+% \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading nips_2017
+%
+% to avoid loading the natbib package, add option nonatbib:
+% \usepackage[nonatbib]{nips_2017}
+
+\usepackage[final]{nips_2017}
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+% \usepackage[final]{nips_2017}
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{filecontents}
+
+\begin{filecontents}{bbib.bib}
+  @article{wang2018joint,
+  title={Joint embedding of words and labels for text classification},
+  author={Wang, Guoyin and Li, Chunyuan and Wang, Wenlin and Zhang, Yizhe and Shen, Dinghan and Zhang, Xinyuan and Henao, Ricardo and Carin, Lawrence},
+  journal={arXiv preprint arXiv:1805.04174},
+  year={2018}
+}
+@article{you2018attentionxml,
+title={AttentionXML: Extreme Multi-Label Text Classification with Multi-Label Attention Based Recurrent Neural Networks},
+author={You, Ronghui and Dai, Suyang and Zhang, Zihan and Mamitsuka, Hiroshi and Zhu, Shanfeng},
+journal={arXiv preprint arXiv:1811.01727},
+year={2018}
+}
+@misc{
+jiao2019probabilistic,
+title={Probabilistic Semantic Embedding},
+author={Yue Jiao and Jonathon Hare and Adam Prügel-Bennett},
+year={2019},
+url={https://openreview.net/forum?id=r1xwqjRcY7},
+}
+@article{bahuleyan2017variational,
+  title={Variational attention for sequence-to-sequence models},
+  author={Bahuleyan, Hareesh and Mou, Lili and Vechtomova, Olga and Poupart, Pascal},
+  journal={arXiv preprint arXiv:1712.08207},
+  year={2017}
+}
+@inproceedings{deng2018latent,
+  title={Latent alignment and variational attention},
+  author={Deng, Yuntian and Kim, Yoon and Chiu, Justin and Guo, Demi and Rush, Alexander},
+  booktitle={Advances in Neural Information Processing Systems},
+  pages={9712--9724},
+  year={2018}
+}
+\end{filecontents}
+
+
+\title{Proposal : Research on Text classification}
+
+% The \author macro works with any number of authors. There are two
+% commands used to separate the names and addresses of multiple
+% authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to
+% break the lines. Using \AND forces a line break at that point. So,
+% if LaTeX puts 3 of 4 authors names on the first line, and the last
+% on the second line, try using \AND instead of \And before the third
+% author name.
+
+\author{
+  Yifei Xu (304880196), Yaxuan Zhu (704947072), Ruiqi Gao (104864885) \\
+  Department of Statistics \\
+  University of California, Los Angeles \\
+  \texttt{fei960922@ucla.edu, yaxuanzhu@ucla.edu, ruiqigao@ucla.edu} \\
+}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+Text classification is a common task in natural language processing (NLP). It predict the most relevant label(s) to a given sentenses or paragraphs. It is widely used in tag recommendation, information retrieval, document categorization, etc. 
+
+A good representation of text is key to this problem. There are multiple work on this field including \cite{you2018attentionxml} \cite{jiao2019probabilistic} \cite{bahuleyan2017variational} \cite{deng2018latent}. It is intuitively to introduce attention into text representation. Recently, LEAM \cite{wang2018joint} introduce attention to linear model classification. We are planning to express this technique to more complex network including LSTM. 
+
+Both bag of word and word embedding may be tried in experiment. Also, MLP, CNN, RNN, LSTM and other network structures will be tested.
+
+% Representation 
+
+% word - > vector :
+
+% bag of word
+% word embedding 
+
+% word thing -> big vector : 
+
+% Triditional : 
+%   mean
+%   rnn / lstm
+%   bi-lstm 
+
+%   LEAM
+
+% text hidden vector text
+
+% hidden vector - > classification
+
+% VAE: 
+
+%   ZSDM : Zero shot document model 
+
+%   Conditional VAE DM
+
+  
+% text -> vector
+
+% word embedding , 
+
+% latent variable, 
+
+\section{Experiment Expectation}
+
+\subsection{Dataset}
+
+We are planning to use one of these public dataset, 
+
+\begin{itemize}
+  \item  Reuters Newswire Topic Classification (Reuters-21578). A collection of news documents that appeared on Reuters in 1987 indexed by categories. It has 90 classes, 7769 training documents and 3019 testing documents. 
+  \item The Extreme Classification Repository: Multi-label Datasets \& Code.
+  \item  IMDB Movie Review Sentiment Classification (stanford). A collection of movie reviews from the website imdb.com and their positive or negative sentiment.
+  \item News Group Movie Review Sentiment Classification (cornell). A collection of movie reviews from the website imdb.com and their positive or negative sentiment.
+\end{itemize}
+
+First two are multi-label dataset. The rest are single-label dataset.
+
+\subsection{Results}
+
+We will compare accuracy for multiple methods. AUC curve may provided.
+
+\section{Appendix}
+
+\subsection{Collaboration}
+
+Everything is a plann and not decided yet.
+
+\begin{itemize}
+  \item  Yifei Xu : Writing proposal, implement core code.
+  \item  Yaxuan Zhu : Writing report, implement add-on, optimizing code.
+  \item Ruiqi Gao : Presentation, Dataset preprocessing, model  training.
+\end{itemize}
+
+\subsection{Timetable}
+
+Everything is a plann and not decided yet.
+
+\begin{itemize}
+  \item Apr.19th : Finish Proposal
+  \item May 15th : Finish core part 
+  \item May 30th : Finish alpha version code
+  \item Jun.7th : Finalize code, finish report and presentation 
+\end{itemize}
+
+
+\section*{Acknowledgments}
+
+This template is NIPS2017 template downloaded from NIPS2017 website.
+
+This proposal is for 2019 Spring CS269 Project. NO DISTRIBUTION.
+
+\bibliographystyle{plain}
+\bibliography{bbib}
+
+\end{document}
