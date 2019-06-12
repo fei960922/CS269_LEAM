@@ -25,8 +25,8 @@ see main.ipynb
 
 
 - The Code for ELMO:
-- The codes for ELMO is under the directory ELMO_BERT. The main interface is the ELMO.ipynb file. And this file use the functions in src directory
-- The code is based on google colabtory 
+  - The codes for ELMO is under the directory ELMO_BERT. The main interface is the ELMO.ipynb file. And this file use the functions in src directory
+  - The code is based on google colabtory 
 
 ## Reference 
 
